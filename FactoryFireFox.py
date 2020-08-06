@@ -65,7 +65,7 @@ class YouTubeCommentBrowser(FactoryFirefoxDriver):
 		time.sleep(tb)
 	def reply_more(self,tb=1):
 		code_view='//yt-formatted-string[contains(.,"View")]'
-		code_show_more_replies='//yt-formatted-string[contains(."Show more replies")]'
+		code_show_more_replies='//yt-formatted-string[contains(.,"Show more replies")]'
 		eles=self.find_elements_by_xpath(code_view)
 		for ele in eles:
 			if ele.text is not "":
