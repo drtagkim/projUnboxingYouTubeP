@@ -24,7 +24,22 @@ class YouTubeCommentBrowser(FactoryFireFoxDriver):
 	def press_down(self,tb=1):
 		self.send_keys(Keys.END)
 		time.sleep(tb)
-	def remove_element_by_id(self,tb=0.5):
+	def scroll_down(self,tb=1):
+		initial_height = self.execute_script("return window.scrollY")
+		html=self.find_element_by_tag_name('html')
+		self.press_down()
+		self.press_down()
+		last_height = self.execute_script("return window.scrollY")
+		if initial_height == last_height:
+			return False
+		while True:
+			time.sleep(tb)
+			new_height=self.execute_script("return window.scrollY")
+			if new_height==last_height:
+				break
+			last_height=new_height
+		return True
+	def remove_element_by_id(self,s,tb=0.5):
 		script="document.getElementById('{}').remove();".format(s)
 		self.execute_script(script)
 		time.sleep(tb)
@@ -60,3 +75,28 @@ class YouTubeCommentBrowser(FactoryFireFoxDriver):
 				ele.click()
 				time.sleep(0.1)
 		time.sleep(tb)
+	def visit(self,url,remove_ad=True,remove_player=True,tb=5):
+		self.get(url)
+		time.sleep(tb)
+		if remove_ad:
+			self.remove_element_by_id('related')
+			time.sleep(0.1)
+		if remove_player:
+			self.remove_element_by_id('movie_player')
+			time.sleep(0.1)
+	def get_data(self):
+		page=self.page_source
+		soup=BS(page,'html.parser')
+		return [ele.text for ele in soup.select('#content-text')]
+	def collect_review(self,remove_previous=True):
+		total_comment=[] # //TODO - bs4
+		while True:
+			if self.scroll_down(2) is False:
+				break
+			for i in range(3):
+				self.reply_more()
+			self.text_more()
+			total_comment+=self.get_data()
+			if remove_previous:
+				self.remove_comments()
+		return total_comment
