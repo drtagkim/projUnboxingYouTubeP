@@ -23,9 +23,11 @@ class FactoryFirefoxDriver(webdriver.Firefox):
 		options.headless=headless #headless mode on?
 		super().__init__(firefox_profile=profile,options=options)
 #' Webdriver for YouTube comment collection
-#' b=YouTubeCommentBrowser(headless=True,image_allow=False)
-#' b.visit("some YouTube video URL")
-#' comments=b.collect_comments(verbose=True)
+#' >>> b=YouTubeCommentBrowser(headless=True,image_allow=False)
+#' >>> b.visit("some YouTube video URL")
+#' >>> comments=b.collect_comments(verbose=True)
+#' >>> b.quit() #session close.
+#' 
 class YouTubeCommentBrowser(FactoryFirefoxDriver):
 	def __init__(self,headless=False,image_allow=True):
 		super().__init__(headless,image_allow)
