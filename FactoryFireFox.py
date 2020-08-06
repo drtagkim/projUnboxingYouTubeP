@@ -2,23 +2,31 @@
 # Author: Taekyung Kim(kimtk@office.kw.ac.kr)
 # First created on 6 Aug 2020
 # YouTube Data Collection
+# Dependencies:
+#  pip install selenium
+#  pip install bs4
+# Install Firefox first.
 
-from selenium import webdriver #웹드라이브
+from selenium import webdriver #webdriver
 from selenium.webdriver.firefox.options import Options #Firefox options
 from selenium.webdriver.common.keys import Keys #key emulation
 from bs4 import BeautifulSoup as BS
 # utility
 import time
 
-class FactoryFireFoxDriver(webdriver.Firefox):
+#' Firefox factor, inherited from webdriver.Firefox
+class FactoryFirefoxDriver(webdriver.Firefox):
 	def __init__(self,headless=False,image_allow=True):
 		options=Options()
 		profile=webdriver.FirefoxProfile()
 		profile.set_preference('permissions.default.image',1 if image_allow else 2)
-		options.headless=headless
+		options.headless=headless #headless mode on?
 		super().__init__(firefox_profile=profile,options=options)
-
-class YouTubeCommentBrowser(FactoryFireFoxDriver):
+#' Webdriver for YouTube comment collection
+#' b=YouTubeCommentBrowser(headless=True,image_allow=False)
+#' b.visit("some YouTube video URL")
+#' comments=b.collect_comments(verbose=True)
+class YouTubeCommentBrowser(FactoryFirefoxDriver):
 	def __init__(self,headless=False,image_allow=True):
 		super().__init__(headless,image_allow)
 	def press_down(self,tb=1):
@@ -88,15 +96,27 @@ class YouTubeCommentBrowser(FactoryFireFoxDriver):
 		page=self.page_source
 		soup=BS(page,'html.parser')
 		return [ele.text for ele in soup.select('#content-text')]
-	def collect_review(self,remove_previous=True):
+	def collect_comments(self,verbose=False,remove_previous=True):
 		total_comment=[] # //TODO - bs4
+		if verbose:
+			print("Start.")
 		while True:
+			if verbose:
+				print("..Scroll down")
 			if self.scroll_down(2) is False:
 				break
+			if verbose:
+				print("..Call more replies, read more")
 			for i in range(3):
 				self.reply_more()
 			self.text_more()
+			if verbose:
+				print("..Collect data")
 			total_comment+=self.get_data()
 			if remove_previous:
+				if verbose:
+					print("..Remove previous comments in the browser")
 				self.remove_comments()
+		if verbose:
+			print("Done.")
 		return total_comment
