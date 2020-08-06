@@ -31,14 +31,14 @@ class FactoryFirefoxDriver(webdriver.Firefox):
 class YouTubeCommentBrowser(FactoryFirefoxDriver):
 	def __init__(self,headless=False,image_allow=True):
 		super().__init__(headless,image_allow)
-	def press_down(self,tb=1):
-		self.send_keys(Keys.END)
+	def press_down(self,h,tb=1):
+		h.send_keys(Keys.END)
 		time.sleep(tb)
 	def scroll_down(self,tb=1):
 		initial_height = self.execute_script("return window.scrollY")
 		html=self.find_element_by_tag_name('html')
-		self.press_down()
-		self.press_down()
+		self.press_down(html)
+		self.press_down(html)
 		last_height = self.execute_script("return window.scrollY")
 		if initial_height == last_height:
 			return False
