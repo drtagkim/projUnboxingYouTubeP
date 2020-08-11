@@ -1,6 +1,7 @@
 # FactoryFireFox.py
 # Author: Taekyung Kim(kimtk@office.kw.ac.kr)
 # First created on 6 Aug 2020
+# Last updated on 11 Aug 2020
 # YouTube Data Collection
 # Dependencies:
 #  pip install selenium
@@ -65,8 +66,8 @@ class YouTubeCommentBrowser(FactoryFirefoxDriver):
         self.execute_script(script)
         time.sleep(tb)
     def reply_more(self,tb=1):
-        code_view='//yt-formatted-string[contains(.,"View")]'
-        code_show_more_replies='//yt-formatted-string[contains(.,"Show more replies")]'
+        code_view='//yt-formatted-string[starts-with(.,"View") and contains(.,"reply")]'
+        code_show_more_replies='//yt-formatted-string[starts-with(.,"View") and contains(.,"replies")]'
         eles=self.find_elements_by_xpath(code_view)
         for ele in eles:
             try:
@@ -85,7 +86,7 @@ class YouTubeCommentBrowser(FactoryFirefoxDriver):
                 pass
         time.sleep(tb)
     def text_more(self,tb=1):
-        code_read_more='//span[contains(.,"Read more")]'
+        code_read_more='//span[starts-with(.,"Read more")]'
         eles=self.find_elements_by_xpath(code_read_more)
         for ele in eles:
             try:

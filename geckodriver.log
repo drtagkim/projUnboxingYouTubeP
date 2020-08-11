@@ -343,3 +343,114 @@ JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1597120587104	geckodriver	INFO	Listening on 127.0.0.1:55716
+1597120590257	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofileY55WsK"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597120595834	Marionette	INFO	Listening on port 55726
+1597120595997	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+JavaScript error: https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.4.5-20200623140312, line 37: TypeError: i is undefined
+1597120796508	Marionette	INFO	Stopped listening on port 55726
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1597120832850	geckodriver	INFO	Listening on 127.0.0.1:56125
+1597120835945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofile0EnbFP"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597120840305	Marionette	INFO	Listening on port 56134
+1597120840670	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597120931274	Marionette	INFO	Stopped listening on port 56134
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1597120986984	geckodriver	INFO	Listening on 127.0.0.1:56307
+1597120990111	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofilemYR6ud"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597120994529	Marionette	INFO	Listening on port 56317
+1597120994843	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597121116638	Marionette	INFO	Stopped listening on port 56317
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1597121120216	geckodriver	INFO	Listening on 127.0.0.1:56515
+1597121123324	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofile16Fckk"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597121127476	Marionette	INFO	Listening on port 56525
+1597121127550	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/521PoRGnh7h8BVOMyCpHrhejufpyvF5vdQBdJpCoVT0.js line 1 > Function line 3 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/521PoRGnh7h8BVOMyCpHrhejufpyvF5vdQBdJpCoVT0.js line 1 > Function line 3 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://marionette/content/capture.js :: capture.canvas :: line 140"  data: no]
+capture.canvas@chrome://marionette/content/capture.js:140:62
+GeckoDriver.prototype.takeScreenshot@chrome://marionette/content/driver.js:3076:30
+
+1597122990185	Marionette	INFO	Stopped listening on port 56525
+1597122996236	geckodriver	INFO	Listening on 127.0.0.1:64869
+1597122999322	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PC\\AppData\\Local\\Temp\\rust_mozprofile2nWOLn"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597123003961	Marionette	INFO	Listening on port 64882
+1597123004063	Marionette	WARN	TLS certificate errors will be ignored for this session
