@@ -22,7 +22,25 @@
         var newtab=window.open(newurl,'_blank');
         newtab.focus();
         //window.location.replace(newurl);
-    }
+    };
+    function clearentry() {
+        var vid=document.getElementById('vid');
+        vid.value="";
+    };
+    </script>
+    <!-- Key binding -->
+    <script>
+        document.onkeydown = function(e) {
+            e = e || window.event;
+            switch(e.which || e.keyCode) {
+                case 13:
+                    run();
+                    break;
+                case 27:
+                    clearentry();
+                    break;
+            }
+        }
     </script>
 </head>
 <body>
@@ -44,7 +62,8 @@
             </p>
         API KEY:  <input id="apikey" type='text' name="apikey" value="" size=80><br /><br />
         Video ID: <input id="vid" type='text' name='vid' value="" size=80><br /><br /><br />
-        <input type='button' name='execute' value='Execute' onclick='run()'><br />
+        <input type="button" name="clear" value="Clear video ID (ESC)" onclick="clearentry()">
+        <input type='button' name='execute' value='Execute (Enter)' onclick='run()' style='background-color: coral;color:cornsilk;'><br />
         <p></p>
         
     </div>
