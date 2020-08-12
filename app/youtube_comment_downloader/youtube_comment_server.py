@@ -133,8 +133,8 @@ def hello_world():
     return "Hello World"
 @app.route('/<apikey>/<vid>')
 def youtube_comment(apikey,vid):
-    print(apikey)
-    print(vid)
+    #print(apikey)
+    #print(vid)
     yt=YouTubeCommentFactory(apikey)
     yt.service_build()
     results=collect_comment(yt,vid,verbose=True)
@@ -152,4 +152,4 @@ def youtube_comment(apikey,vid):
         attachment_filename='youtube_comment_{}.xlsx'.format(vid),
         as_attachment=True)
 if __name__=='__main__':
-    app.run(host='0.0.0.0',port=9999,debug=True)
+    app.run(host='0.0.0.0',port=9999,debug=False)

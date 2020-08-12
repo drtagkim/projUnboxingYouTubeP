@@ -18,6 +18,10 @@
     function run() {
         var apikey=document.getElementById("apikey").value;
         var vid=document.getElementById('vid').value;
+        //
+        if(vid.indexOf("?v=")>0) {
+            vid=vid.split("?v=")[1]
+        }
         var newurl='http://localhost:9999/'+apikey+'/'+vid;
         var newtab=window.open(newurl,'_blank');
         newtab.focus();
@@ -54,12 +58,9 @@
     <center>
     <div class="center">
         
-            <p>
-                YouTube Data API에서 획득한 API KEY와 YouTube 동영상의 video ID를 입력하시오.
-            </p>
-            <p>
-                https://www.youtube.com/watch?v=fQIzm6E1Lfs 에서 ?v= 이후의 문자가 video ID임.
-            </p>
+            <p>YouTube Data API에서 획득한 API KEY와 YouTube 동영상의 video ID를 입력하시오.</p>
+            <p>https://www.youtube.com/watch?v=fQIzm6E1Lfs 에서 ?v= 이후의 문자가 video ID임.</p>
+            <p>링크를 바로 붙이거나 video ID를 입력.</p>
         API KEY:  <input id="apikey" type='text' name="apikey" value="" size=80><br /><br />
         Video ID: <input id="vid" type='text' name='vid' value="" size=80><br /><br /><br />
         <input type="button" name="clear" value="Clear video ID (ESC)" onclick="clearentry()">
