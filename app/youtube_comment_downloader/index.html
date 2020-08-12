@@ -19,8 +19,9 @@
         var apikey=document.getElementById("apikey").value;
         var vid=document.getElementById('vid').value;
         var newurl='http://localhost:9999/'+apikey+'/'+vid;
-        alert(newurl);
-        window.location.replace(newurl);
+        var newtab=window.open(newurl,'_blank');
+        newtab.focus();
+        //window.location.replace(newurl);
     }
     </script>
 </head>
