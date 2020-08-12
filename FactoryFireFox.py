@@ -11,6 +11,7 @@
 from selenium import webdriver #webdriver
 from selenium.webdriver.firefox.options import Options #Firefox options
 from selenium.webdriver.common.keys import Keys #key emulation
+from selenium.common.exceptions import NoSuchElementException #exception
 from bs4 import BeautifulSoup as BS
 # utility
 import time
