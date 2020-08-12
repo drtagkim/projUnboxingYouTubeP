@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>YouTube Comment Downloader</title>
+    <style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid rgb(214, 102, 37);
+  padding: 10px;
+}
+.small {
+    font-size:70%;
+    color:blue;
+}
+    </style>
+    <script>
+    function run() {
+        var apikey=document.getElementById("apikey").value;
+        var vid=document.getElementById('vid').value;
+        var newurl='http://localhost:9999/'+apikey+'/'+vid;
+        alert(newurl);
+        window.location.replace(newurl);
+    }
+    </script>
+</head>
+<body>
+        <p>먼저 Anaconda console에서 python youtube_comment_server.py를 실행할 것</p>
+        <p>필요한 것들:</p>
+        <ul>
+            <li>Anaconda Python 3.6 이상</li>
+            <li>pip install google-api-python-client</li>
+            <li>pip install flask</li>
+        </ul>
+    <center>
+    <div class="center">
+        
+            <p>
+                YouTube Data API에서 획득한 API KEY와 YouTube 동영상의 video ID를 입력하시오.
+            </p>
+            <p>
+                https://www.youtube.com/watch?v=fQIzm6E1Lfs 에서 ?v= 이후의 문자가 video ID임.
+            </p>
+        API KEY:  <input id="apikey" type='text' name="apikey" value="" size=80><br /><br />
+        Video ID: <input id="vid" type='text' name='vid' value="" size=80><br /><br /><br />
+        <input type='button' name='execute' value='Execute' onclick='run()'><br />
+        <p></p>
+        
+    </div>
+    <div class="small">
+            <p>2020. 광운대학교 경영대학 김태경 교수(kimtk@office.kw.ac.kr)</p>
+            <p>YouTube Comment Downloader</p>
+    </div></center>
+</body>
