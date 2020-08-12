@@ -141,7 +141,7 @@ def youtube_comment(apikey,vid):
     comments=process_raw_comment_result(results)
     n=cal_all_comments(comments)
     analyzed=analyze_to_pandas(comments)
-    analyzed.to_excel('peng_TV_sample.xlsx',index=False)
+    #analyzed.to_excel('peng_TV_sample.xlsx',index=False)
     output=io.BytesIO()
     writer=pd.ExcelWriter(output,engine='xlsxwriter')
     analyzed.to_excel(writer,'Tab1',index=False)
