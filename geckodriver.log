@@ -27,7 +27,8 @@ JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
-dules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: uncaught exception: Object
+irectory.
 console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
 1596518773515	Marionette	INFO	Listening on port 55744
 1596518773652	Marionette	WARN	TLS certificate errors will be ignored for this session
@@ -38,8 +39,8 @@ JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
-ile directory.
-console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+JavaScript error: , line 0: uncaught exception: Object
+ile: Error reading cache file:" (new Error("", "(unknown module)"))
 1596518867783	Marionette	INFO	Listening on port 55883
 1596518867857	Marionette	WARN	TLS certificate errors will be ignored for this session
 console.warn: "Got a mutation for an unexpected actor: server0.conn1.child2/domnode404, please file a bug on bugzilla.mozilla.org!"
@@ -455,3 +456,10 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
 1597123003961	Marionette	INFO	Listening on port 64882
 1597123004063	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597125358486	Marionette	INFO	Stopped listening on port 64882
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
