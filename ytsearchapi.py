@@ -92,15 +92,23 @@ class YouTube_Search(YouTube):
     def collect_data(self,result):
         output=[]
         for item in result['items']:
-            videoId=item['id']['videoId']
-            snippet=item['snippet']
-            if "thumbnails" in snippet:
-                snippet.pop('thumbnails')
-            if "liveBroadcastContent" in snippet:
-                snippet.pop('liveBroadcastContent')
-            snippet['videoId']=videoId
-            output.append(snippet)
+            try:
+                videoId=item['id']['videoId']
+                snippet=item['snippet']
+                if "thumbnails" in snippet:
+                    snippet.pop('thumbnails')
+                if "liveBroadcastContent" in snippet:
+                    snippet.pop('liveBroadcastContent')
+                snippet['videoId']=videoId
+                if 'regionCode' in self.options:
+                    snippet['regionCode']=self.options['regionCode']
+                else:
+                    snippet['regionCode']='NA'
+                output.append(snippet)
+            except:
+                pass
         o2=pd.DataFrame(output)
+        o2['query']=self.options['q']
         self.data.append(o2)
     def empty_data(self):
         self.data=[]
@@ -258,5 +266,8 @@ class YouTube_Search(YouTube):
     def next_page(self):
         result=self.current_result
         if result is not None:
-            self.update_options({'pageToken':result['nextPageToken']})
+            if 'nextPageToken' in result:
+                self.update_options({'pageToken':result['nextPageToken']})
+                return True
+        return False
     
