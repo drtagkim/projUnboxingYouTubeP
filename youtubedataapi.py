@@ -124,7 +124,10 @@ class YouTube_Video(YouTube):
         output['title']=item['snippet']['title']
         output['description']=item['snippet']['description']
         output['channelTitle']=item['snippet']['channelTitle']
-        output['tags']=",".join(item['snippet']['tags'])
+        if 'tags' in item['snippet']:
+            output['tags']=",".join(item['snippet']['tags'])
+        else:
+            output['tags']=''
         output['categoryId']=item['snippet']['categoryId']
         output['liveBroadcastContent']=item['snippet']['liveBroadcastContent']
         output['duration']=item['contentDetails']['duration']
