@@ -113,6 +113,8 @@ class YouTube_Video(YouTube):
             ).execute()
         self.collect_data(response)
         self.current_result=response
+    def append_empty(self,fname):
+        self.export_data().to_csv(fname,mode='a',header=False,index=False)
     def collect_data(self,result):
         output={}
         item=result['items'][0]
